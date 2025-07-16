@@ -1,5 +1,9 @@
-function App() {
-  return <>123</>;
-}
+import { Outlet } from "react-router-dom";
 
-export default App;
+export function App() {
+  return (
+    <>
+      <Outlet />
+    </>
+  );
+}
