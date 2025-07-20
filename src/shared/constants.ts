@@ -1,0 +1,37 @@
+export const GENRES = [
+  { label: "Драма", value: "драма" },
+  { label: "Комедия", value: "комедия" },
+  { label: "Боевик", value: "боевик" },
+  { label: "Ужасы", value: "ужасы" },
+  { label: "Мелодрама", value: "мелодрама" },
+  { label: "Триллер", value: "триллер" },
+  { label: "Детектив", value: "детектив" },
+  { label: "Фантастика", value: "фантастика" },
+  { label: "Фэнтези", value: "фэнтези" },
+  { label: "Военный", value: "военный" },
+  { label: "Биография", value: "биография" },
+  { label: "Документальный", value: "документальный" },
+  { label: "Для взрослых", value: "для взрослых" },
+];
+export const COUNTRIES = [
+  { label: "Россия", value: "Россия" },
+  { label: "США", value: "США" },
+  { label: "Франция", value: "Франция" },
+  { label: "Великобритания", value: "Великобритания" },
+  { label: "Германия", value: "Германия" },
+  { label: "Италия", value: "Италия" },
+  { label: "Испания", value: "Испания" },
+  { label: "Бразилия", value: "Бразилия" },
+  { label: "Корея Южная", value: "Корея Южная" },
+  { label: "Япония", value: "Япония" },
+  { label: "Китай", value: "Китай" },
+  { label: "Индия", value: "Индия" },
+  { label: "Канада", value: "Канада" },
+];
+export const TYPES = [
+  { label: "Фильм", value: "movie" },
+  { label: "Сериал", value: "tv-series" },
+  { label: "Мультфильм", value: "cartoon" },
+  { label: "Аниме", value: "anime" },
+  { label: "Анимационный сериал", value: "animated-series" },
+];
