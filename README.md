@@ -1,69 +1,105 @@
-# React + TypeScript + Vite
+# 🎬 WhatToWatch
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Веб-приложение для поиска фильмов с использованием API КиноПоиска. Позволяет получать случайные фильмы с системой фильтрации.
 
-Currently, two official plugins are available:
+![React](https://img.shields.io/badge/react-19.1.0-blue)
+![TypeScript](https://img.shields.io/badge/typescript-5.8.3-blue)
+![Vite](https://img.shields.io/badge/vite-7.0.4-purple)
+![Tailwind CSS](https://img.shields.io/badge/tailwind-4.1.11-cyan)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Технологический стек
 
-## Expanding the ESLint configuration
+### Frontend
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - библиотека для создания пользовательских интерфейсов
+- **TypeScript** - статическая типизация для JavaScript
+- **Vite** - быстрый сборщик и инструмент разработки
+- **Tailwind CSS** - утилитарный CSS-фреймворк
+- **Radix UI** - примитивы для создания доступных компонентов
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Управление состоянием и данными
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- **TanStack Query (React Query)** - мощная библиотека для управления серверным состоянием
+- **Zustand** - легковесное управление клиентским состоянием
+- **React Hook Form** - производительные формы с минимальными ре-рендерами
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
+### API и типизация
+
+- **OpenAPI** - автоматическая генерация типов из OpenAPI схемы
+- **openapi-fetch** - типизированный HTTP-клиент
+- **Zod** - валидация схем данных
+
+## 🚀 Быстрый старт
+
+### Предварительные требования
+
+- Node.js >= 18
+- npm или yarn
+
+### Установка
+
+1. **Клонируйте репозиторий:**
+
+   ```bash
+   git clone <repository-url>
+   cd kino
+   ```
+
+2. **Установите зависимости:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Настройте переменные окружения:**
+
+   ```bash
+   # Создайте файл .env
+   # Добавьте необходимые переменные для API КиноПоиска
+   ```
+
+4. **Запустите приложение в режиме разработки:**
+
+   ```bash
+   npm run dev
+   ```
+
+5. **Откройте браузер:**
+   ```
+   http://localhost:5173
+   ```
+
+## 📋 Доступные скрипты
+
+- `npm run dev` - запуск в режиме разработки
+- `npm run build` - сборка для продакшена
+- `npm run preview` - предварительный просмотр продакшен сборки
+- `npm run lint` - проверка кода линтером
+- `npm run api` - генерация типов из OpenAPI схемы
+
+## 🔧 API Integration
+
+Приложение использует API КиноПоиска v1.4 с автоматической генерацией типов:
+
+```typescript
+// Получение случайного фильма с фильтрами
+const randomMovie = rqClient.useQuery("get", "/v1.4/movie/random", {
+  params: {
+    query: filters,
   },
-])
+});
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🔮 Планы развития
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- [ ] Добавление избранного
+- [ ] Детальная страница фильма
+- [ ] Поиск по названию
+- [ ] История просмотренных фильмов
+- [ ] Рекомендации на основе предпочтений
+- [ ] Темная/светлая тема
+- [ ] PWA поддержка
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📝 Лицензия
+
+Этот проект создан в образовательных целях.
