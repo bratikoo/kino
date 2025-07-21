@@ -1,0 +1,58 @@
+{
+  "sign_up": {
+    "email_label": "Электронная почта",
+    "password_label": "Пароль",
+    "email_input_placeholder": "Введите ваш email",
+    "password_input_placeholder": "Введите пароль",
+    "button_label": "Зарегистрироваться",
+    "loading_button_label": "Регистрация...",
+    "social_provider_text": "Войти через",
+    "link_text": "Нет аккаунта? Зарегистрироваться",
+    "confirmation_text": "Проверьте вашу электронную почту для подтверждения регистрации"
+  },
+  "sign_in": {
+    "email_label": "Электронная почта",
+    "password_label": "Пароль",
+    "email_input_placeholder": "Введите ваш email",
+    "password_input_placeholder": "Введите пароль",
+    "button_label": "Войти",
+    "loading_button_label": "Вход...",
+    "social_provider_text": "Войти через",
+    "link_text": "Уже есть аккаунт? Войти"
+  },
+  "magic_link": {
+    "email_input_label": "Электронная почта",
+    "email_input_placeholder": "Введите ваш email",
+    "button_label": "Отправить ссылку",
+    "loading_button_label": "Отправка...",
+    "link_text": "Войти через ссылку",
+    "confirmation_text": "Проверьте вашу электронную почту и перейдите по ссылке для входа",
+    "empty_email_address": "Пожалуйста, введите адрес электронной почты"
+  },
+  "forgotten_password": {
+    "email_label": "Электронная почта",
+    "password_label": "Новый пароль",
+    "email_input_placeholder": "Введите ваш email",
+    "button_label": "Сбросить пароль",
+    "loading_button_label": "Отправка...",
+    "link_text": "Забыли пароль?",
+    "confirmation_text": "Проверьте вашу электронную почту для восстановления пароля"
+  },
+  "update_password": {
+    "password_label": "Новый пароль",
+    "password_input_placeholder": "Введите новый пароль",
+    "button_label": "Обновить пароль",
+    "loading_button_label": "Обновление...",
+    "confirmation_text": "Ваш пароль был успешно обновлен"
+  },
+  "verify_otp": {
+    "email_input_label": "Электронная почта",
+    "email_input_placeholder": "Введите ваш email",
+    "phone_input_label": "Номер телефона",
+    "phone_input_placeholder": "Введите номер телефона",
+    "token_input_label": "Код подтверждения",
+    "token_input_placeholder": "Введите код из SMS/Email",
+    "button_label": "Подтвердить",
+    "loading_button_label": "Проверка..."
+  }
+}
