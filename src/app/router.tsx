@@ -17,7 +17,7 @@ export const router = createBrowserRouter([
         children: [
           {
             path: ROUTES.FAVORITES,
-            lazy: () => import("@/features/bookmarks/bookmarks.page"),
+            lazy: () => import("@/features/favorites/favorites.page"),
           },
         ],
       },

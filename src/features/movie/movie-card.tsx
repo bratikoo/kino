@@ -65,7 +65,7 @@ export const MovieCard = ({
                 <p className="text-pretty text-sm">{movie?.description}</p>
               )}
               <div className="flex flex-wrap gap-4">
-                {movie?.rating?.kp && (
+                {!!movie?.rating?.kp && (
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">
                       Рейтинг KP
@@ -76,7 +76,7 @@ export const MovieCard = ({
                     </div>
                   </div>
                 )}
-                {movie?.rating?.imdb && (
+                {!!movie?.rating?.imdb && (
                   <div>
                     <div className="text-sm text-muted-foreground mb-1">
                       Рейтинг IMDB

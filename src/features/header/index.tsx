@@ -12,21 +12,22 @@ import { Clapperboard, Moon, Sun, LogOut, Bookmark } from "lucide-react";
 import { AuthForm } from "@/features/auth-form";
 import { useSession } from "@/shared/model/auth";
 import { ROUTES } from "@/shared/model/routes";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export function AppHeader() {
   const { setTheme } = useTheme();
   const { session, logout } = useSession();
+  const { pathname } = useLocation();
 
   return (
-    <header className="py-3 px-4 mb-6 bg-linear-to-r from-cyan-500 to-blue-500">
+    <header className="py-3 px-4 mb-6 bg-linear-to-r from-cyan-500 to-blue-500 sticky top-0 z-50 dark:from-blue-900 dark:to-cyan-800">
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Clapperboard className="text-white dark:text-black" />
-          <h1 className="scroll-m-20 text-center text-2xl tracking-tight text-balance text-white dark:text-black">
+        <Link to={ROUTES.HOME} className="flex items-center gap-2">
+          <Clapperboard className="text-white dark:text-gray-100" />
+          <h1 className="scroll-m-20 text-center text-2xl tracking-tight text-balance text-white dark:text-gray-100">
             WhatToWatch
           </h1>
-        </div>
+        </Link>
         <div className="flex items-center gap-2">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
@@ -59,7 +60,9 @@ export function AppHeader() {
                 <Button
                   variant="ghost"
                   size="icon"
-                  className="hover:bg-blue-200 hover:cursor-pointer"
+                  className={`hover:bg-blue-200 hover:cursor-pointer ${
+                    pathname === ROUTES.FAVORITES ? "bg-accent/50 " : ""
+                  }`}
                 >
                   <Bookmark className="size-6 scale-100 rotate-0 transition-all text-white" />
                 </Button>
