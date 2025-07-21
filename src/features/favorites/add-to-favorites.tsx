@@ -19,6 +19,7 @@ export const AddToFavorites = ({
 
     try {
       const { error } = await supabase.from("favorites").insert({
+        user_id: session.user.id,
         rating: movie.rating,
         external_id: movie.id,
         type: movie.type,
